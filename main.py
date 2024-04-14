@@ -20,7 +20,7 @@ def getAddressBalance(crypto, address):
     data = r.json()
     print(data)
 
-# getAddressBalance('btc', '34xp4vRoCGJym3xR7yCVPFHoCNxv4Twseo')
+
 
 def getAddressBalanceUSD(crypto, cryptoabbr, address):
     global KEY
@@ -45,7 +45,7 @@ def getAddressBalanceUSD(crypto, cryptoabbr, address):
     crypto_in_usd = "${:,.2f}".format(crypto_to_usd)
     print(crypto_in_usd) # prints the amount of money in a users wallet in USD
 
-# getAddressBalanceUSD('litecoin', 'ltc', 'M8T1B2Z97gVdvmfkQcAtYbEepune1tzGua')
+
     
 
 def getAddressInfo(cryptoabbr, address):
@@ -59,7 +59,7 @@ def getAddressInfo(cryptoabbr, address):
     
     
 
-# getAddressInfo('ltc', 'M8T1B2Z97gVdvmfkQcAtYbEepune1tzGua')
+
     
 
 def getRichestRank(cryptoabbr, address):
@@ -69,7 +69,7 @@ def getRichestRank(cryptoabbr, address):
     
 
 
-# getRichestRank('ltc', 'M8T1B2Z97gVdvmfkQcAtYbEepune1tzGua')
+
 
 
 def getTotalRecievedAmount(cryptoabbr, address):
@@ -78,7 +78,7 @@ def getTotalRecievedAmount(cryptoabbr, address):
     print(r.text) # prints the amount the wallet has recieved 
 
 
-# getRecievedAmount('ltc', 'M8T1B2Z97gVdvmfkQcAtYbEepune1tzGua')
+
 
 
 def getTransactionSummary(cryptoabbr, txhash):
@@ -88,7 +88,6 @@ def getTransactionSummary(cryptoabbr, txhash):
     print(data) # prints all the transaction data in json when given a txid
 
 
-# getTransactionSummary('ltc', 'd8b1138d8764de84d4829ae2355ca21adc2436567be86009d58f6aa1558e1d74')
 
 
 def getRecentTransactions(cryptoabbr, txhash,):
@@ -98,6 +97,5 @@ def getRecentTransactions(cryptoabbr, txhash,):
     print(data) # prints the 10 most recent transactions given a transaction hash do not include coinbase and stake transactions
 
 
-# getRecentTransactions('ltc', 'e8632f0bf5f895690fd993e2499b43fba354ed270e00688d4697ed4e7b94f73b')
 
     
