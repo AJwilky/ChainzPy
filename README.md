@@ -1,7 +1,7 @@
 # ChainzPy
 Simple and easy api wrapper for https://chainz.cryptoid.info/
 
-### <span style="font-size:30;">Installation</span>
+### <span style="font-size:larger;">Installation</span>
 ---
 
 
