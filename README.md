@@ -11,4 +11,10 @@ pip install Chainzpy==0.3
 ```
 
 
+# Key Features
+---
+* Simplified API Usage
+* Returns string and json responses
+
+
 
