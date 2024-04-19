@@ -31,15 +31,12 @@ def getAddressBalanceUSD(crypto, cryptoabbr, address):
     striped2Price = stripedPrice.strip('</')
     final_price = striped2Price.replace(",", "").replace("$", "")
     float_price = float(final_price)
-    print(final_price)
-    print(float_price)
 
     
 
     r1 = requests.get(f'https://chainz.cryptoid.info/{cryptoabbr}/api.dws?q=getbalance&a={address}&key{KEY}')
     data = r1.text
     crypto_bal = float(data)
-    print(crypto_bal)
     crypto_to_usd = float_price * crypto_bal
     crypto_in_usd = "${:,.2f}".format(crypto_to_usd)
     print(crypto_in_usd) # prints the amount of money in a users wallet in USD
