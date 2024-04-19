@@ -1,4 +1,5 @@
 import requests
+import re
 from bs4 import BeautifulSoup
 
 
@@ -19,7 +20,7 @@ def getAddressBalance(crypto, address):
     data = r.json()
     print(data)
 
-
+# getAddressBalance('btc', 'address')
 
 def getAddressBalanceUSD(crypto, cryptoabbr, address):
     global KEY
@@ -41,7 +42,7 @@ def getAddressBalanceUSD(crypto, cryptoabbr, address):
     crypto_in_usd = "${:,.2f}".format(crypto_to_usd)
     print(crypto_in_usd) # prints the amount of money in a users wallet in USD
 
-
+# getAddressBalanceUSD('litecoin', 'ltc', 'address')
     
 
 def getAddressInfo(cryptoabbr, address):
@@ -54,8 +55,7 @@ def getAddressInfo(cryptoabbr, address):
         print(f'Balance: {data['balance']} | Transaction Count: {data['transactionCount']} | First Block: {data['firstBlock']} | Last Block: {data['lastBlock']}')
     
     
-
-
+# getAddressInfo('ltc', 'address')
     
 
 def getRichestRank(cryptoabbr, address):
@@ -65,7 +65,7 @@ def getRichestRank(cryptoabbr, address):
     
 
 
-
+# getRichestRank('ltc', 'address')
 
 
 def getTotalRecievedAmount(cryptoabbr, address):
@@ -74,7 +74,7 @@ def getTotalRecievedAmount(cryptoabbr, address):
     print(r.text) # prints the amount the wallet has recieved 
 
 
-
+# getRecievedAmount('ltc', 'address')
 
 
 def getTransactionSummary(cryptoabbr, txhash):
@@ -84,6 +84,7 @@ def getTransactionSummary(cryptoabbr, txhash):
     print(data) # prints all the transaction data in json when given a txid
 
 
+# getTransactionSummary('ltc', 'address')
 
 
 def getRecentTransactions(cryptoabbr, txhash,):
@@ -93,5 +94,6 @@ def getRecentTransactions(cryptoabbr, txhash,):
     print(data) # prints the 10 most recent transactions given a transaction hash do not include coinbase and stake transactions
 
 
+# getRecentTransactions('ltc', 'address')
 
     
