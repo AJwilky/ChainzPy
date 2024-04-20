@@ -41,6 +41,7 @@ def getAddressBalanceUSD(crypto, cryptoabbr, address):
     crypto_to_usd = float_price * crypto_bal
     crypto_in_usd = "${:,.2f}".format(crypto_to_usd)
     print(crypto_in_usd) # prints the amount of money in a users wallet in USD
+    # Uses a bit more than just the chainz api but useful so addition 
 
 # getAddressBalanceUSD('litecoin', 'ltc', 'address')
     
