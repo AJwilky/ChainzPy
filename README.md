@@ -7,7 +7,7 @@ Simple and easy api wrapper for https://chainz.cryptoid.info/
 
 
 ```markdown
-pip install chainzpy
+pip install chainzpy==0.7
 ```
 
 
