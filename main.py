@@ -26,7 +26,7 @@ def getAddressBalanceUSD(crypto, cryptoabbr, address):
     global KEY
     r = requests.get(f'https://coinmarketcap.com/currencies/{crypto}/')
     soup = BeautifulSoup(r.text, 'html.parser')
-    price_find = soup.find(class_='sc-f70bb44c-0 jxpCgO base-text')
+    price_find = soup.find(class_='sc-65e7f566-0 clvjgF base-text')
     str_price = str(price_find)
     stripedPrice = str_price.strip('<span class="sc-f70bb44c-0 jxpCgO base-text">')
     striped2Price = stripedPrice.strip('</')
